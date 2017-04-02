@@ -94,9 +94,6 @@ MongoClient mongoClient;
         DBObject group=new BasicDBObject("$group",new BasicDBObject("_id","$_id")
                 .append("projects", new BasicDBObject("$push","$projects"))
                 .append("productObjects", new BasicDBObject("$push","$productObjects")));
-        
-    
-    
       DBObject group2=new BasicDBObject("$group",new BasicDBObject("_id","$productObjects.projectName"));
                
     
